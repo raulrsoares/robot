@@ -1,4 +1,4 @@
-/* Fórmula Maker 2.0   ROBONÁTICOS 2022
+/* Tropa do Robo
 
     Programa para controle de robô via Bluetoth - Micontrolador ESP-32
 
@@ -204,3 +204,9 @@ void MOVE(byte m1, byte m1t, byte m2, byte m2t) {
   digitalWrite(mtEF, m2);
   digitalWrite(mtET, m2t);
 }
+
+
+/*
+Copyright © 2022 Tropa do Robo
+Made with @raulrsoares © 2022  Tropa do Robo, Inc
+*/

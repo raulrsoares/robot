@@ -14,7 +14,7 @@
 BluetoothSerial SerialBT;
 //                                                                                                              Não precisa alterar
 
-//Declarando variáveis
+//    Declarando variáveis
 const int led =  2;  //Define Led
 
 String message = "";
@@ -43,7 +43,7 @@ void setup() {
 //                                                                                                              Fim da configuração - Principal/Inicial
 
 
-// coloque seu código de configuração aqui, para executar uma vez:
+// Código de configuração aqui, para executar uma vez:
 void loop() {
 
   if (SerialBT.available()) {
@@ -54,9 +54,7 @@ void loop() {
   }
 
 
-  // recebendo comando do aplicativo, Se o ESP receber a letra F do aplcativo ele vai executar os comandos de led e motor
-
-
+//                                                                                                              Recebendo comando do aplicativo (F) - Inicio
   if (message == "F"); {
     
     digitalWrite(mtDF, HIGH);
@@ -66,7 +64,9 @@ void loop() {
     digitalWrite(led, HIGH);
   }
 
+//                                                                                                              Recebendo comando do aplicativo (F) - Fim
 
+//                                                                                                              Recebendo comando do aplicativo (L) - Inicio
   if (message == "L") {
     
     digitalWrite(mtDF, LOW);
@@ -75,7 +75,9 @@ void loop() {
     digitalWrite(mtET, LOW);
     digitalWrite(led, HIGH);
   }
-  
+//                                                                                                              Recebendo comando do aplicativo (L) - Fim
+
+//                                                                                                              Recebendo comando do aplicativo (R) - Inicio
   if (message == "R") {
     
     digitalWrite(mtDF, HIGH);
@@ -84,7 +86,9 @@ void loop() {
     digitalWrite(mtET, LOW);
     digitalWrite(led, HIGH);
   }
-  
+//                                                                                                              Recebendo comando do aplicativo (R) - FIM
+
+//                                                                                                              Recebendo comando do aplicativo (B) - Inicio
   if (message == "B") {
 
     digitalWrite(mtDF, LOW);
@@ -93,8 +97,9 @@ void loop() {
     digitalWrite(mtET, HIGH);
     digitalWrite(led, HIGH);
   }
+//                                                                                                              Recebendo comando do aplicativo (B) - Fim
 
-
+//                                                                                                              Recebendo comando do aplicativo (S) - Inicio
   else if (message == "S") {
     
     digitalWrite(mtDF, 0);
@@ -103,7 +108,9 @@ void loop() {
     digitalWrite(mtET, LOW);
     digitalWrite(led, LOW);
   }
+//                                                                                                              Recebendo comando do aplicativo (S) - Fim
 
+//                                                                                                              Recebendo comando do aplicativo (X) - Inicio
 
   //Aplicativo conta com comando de voz, pré configurada palavra "robonáticos", se o aplicativo entender essa palavra ele irá enviar a letra X para o ESP que irá realizar os movimentos abaixo.
 /*
@@ -203,7 +210,7 @@ void MOVE(byte m1, byte m1t, byte m2, byte m2t) {
   digitalWrite(mtEF, m2);
   digitalWrite(mtET, m2t);
 }
-
+//                                                                                                              Recebendo comando do aplicativo (X) - Fim
 
 /*
 Made with @raulrsoares © 2022  Tropa do Robo, Inc

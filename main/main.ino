@@ -1,12 +1,6 @@
-/* Tropa do Robo
-
-    Programa para controle de robô via Bluetoth - Micontrolador ESP-32
-
-    GEAR UP
-
-    LINK DO APLICATIVO
-
-    Logue na galeria do app Inventor e procure pelo aplicativo Formula_Maker  colocando na busca palavra Maker
+/*
+  Copyright © 2022 Tropa do Robo
+  Programa para controle de robô via Bluetoth - Micontrolador ESP-32
 */
 
 
@@ -64,6 +58,7 @@ void loop() {
 
 
   if (message == "F"); {
+    
     digitalWrite(mtDF, HIGH);
     digitalWrite(mtDT, LOW);
     digitalWrite(mtEF, HIGH);
@@ -73,19 +68,23 @@ void loop() {
 
 
   if (message == "L") {
+    
     digitalWrite(mtDF, LOW);
     digitalWrite(mtDT, HIGH);
     digitalWrite(mtEF, HIGH);
     digitalWrite(mtET, LOW);
     digitalWrite(led, HIGH);
   }
+  
   if (message == "R") {
+    
     digitalWrite(mtDF, HIGH);
     digitalWrite(mtDT, LOW);
     digitalWrite(mtEF, HIGH);
     digitalWrite(mtET, LOW);
     digitalWrite(led, HIGH);
   }
+  
   if (message == "B") {
 
     digitalWrite(mtDF, LOW);
@@ -96,8 +95,8 @@ void loop() {
   }
 
 
-  else if (message == "S")
-  {
+  else if (message == "S") {
+    
     digitalWrite(mtDF, 0);
     digitalWrite(mtDT, LOW);
     digitalWrite(mtEF, 0);
@@ -207,6 +206,5 @@ void MOVE(byte m1, byte m1t, byte m2, byte m2t) {
 
 
 /*
-Copyright © 2022 Tropa do Robo
 Made with @raulrsoares © 2022  Tropa do Robo, Inc
 */

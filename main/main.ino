@@ -99,7 +99,18 @@ void loop() {
     digitalWrite(led, HIGH);
   }
   //                                                                                                              Recebendo comando do aplicativo (B) - Fim
+/*
+  //                                                                                                              Recebendo comando do aplicativo (G) - Inicio
+  if (message == "G") {
 
+    digitalWrite(mtDF, LOW);
+    digitalWrite(mtDT, HIGH);
+    digitalWrite(mtEF, LOW);
+    digitalWrite(mtET, HIGH);
+    digitalWrite(led, HIGH);
+  }
+  //                                                                                                              Recebendo comando do aplicativo (G) - Fim
+*/
   //                                                                                                              Recebendo comando do aplicativo (S) - Inicio
   else if (message == "S") {
 

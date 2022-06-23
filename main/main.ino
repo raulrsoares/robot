@@ -1,6 +1,6 @@
 
 /*
-  Copyright © 2022 Tropa do Robo
+  Copyright © 2022 Tropa do Robo, Inc
   Programa para controle de robô via Bluetoth - Micontrolador ESP-32
 */
 

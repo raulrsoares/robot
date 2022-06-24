@@ -4,18 +4,16 @@
   Programa para controle de robô via Bluetoth - Micontrolador ESP-32
 */
 
-
-
 #include "BluetoothSerial.h"   //chama a biblioteca Bluetoth
 
-//Configuração da Placa ESP -  Não precisa alterar
+//Configuração da Placa ESP   -   Não precisa alterar
 #if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
 #error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
 #endif
 BluetoothSerial SerialBT;
 //  Não precisa alterar
 
-//    Declarando variáveis
+//  Declarando variáveis
 const int led =  2;  //Define Led
 
 String message = "";
@@ -36,10 +34,10 @@ void setup() {
   Serial.begin(115200);
   pinMode(led, OUTPUT);
   pinMode(mtDF, OUTPUT);
-  pinMode(mtDT, OUTPUT);//CONFIGURA MOTORES    garanta que os motores de fato respeite as configurações. inverta número das portas até o controle funcionar de forma adequada
+  pinMode(mtDT, OUTPUT);//  CONFIGURA MOTORES garanta que os motores de fato respeite as configurações. inverta número das portas até o controle funcionar de forma adequada
   pinMode(mtEF, OUTPUT);
   pinMode(mtET, OUTPUT);
-  SerialBT.begin("robozin"); //Nome do Bluetooth  senha:1234
+  SerialBT.begin("robozin"); // Nome do Bluetooth  senha:1234
 }
 //  Fim da configuração - Principal/Inicial
 
@@ -91,15 +89,15 @@ void loop() {
     digitalWrite(led, HIGH);
   }
   //  Recebendo comando do aplicativo (B) - Fim
-  /*
-    //  Recebendo comando do aplicativo (G) - Inicio
-    if (message == "G") {
+  
+  //  Recebendo comando do aplicativo (G) - Inicio
+  if (message == "G") {
 
-      MOVE(1, 0, 1, 0)
-      digitalWrite(led, HIGH);
-    }
-    //  Recebendo comando do aplicativo (G) - Fim
-  */
+    MOVE(1, 0, 1, 0);
+    digitalWrite(led, HIGH);
+  }
+  //  Recebendo comando do aplicativo (G) - Fim
+
   //  Recebendo comando do aplicativo (S) - Inicio
   else if (message == "S") {
 

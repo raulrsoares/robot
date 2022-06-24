@@ -29,7 +29,6 @@ int mtET = 4;   //motor esquerda trás
 //  Inicio da configuração - Principal/Inicial
 void setup() {
 
-
   //Configurando ESP-32
   Serial.begin(115200);
   pinMode(led, OUTPUT);
